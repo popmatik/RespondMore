@@ -1,4 +1,10 @@
-# Respond.js 
+# RespondMore - Respond.js for use with Enquire.js for IE9< support
+
+To get Respond to work nicely back to IE8 with Enquire.js, we needed to utilize [David Knight's Media.match](https://github.com/weblinc/media-match) instead of the [matchMedia() polyfill](https://github.com/paulirish/matchMedia.js) by Paul Irish, Scott Jehl, and Nicholas Zakas. Therefore, this is a custom implementation that does exactly that. Also, it no longer gobbles up the window.matchMedia namespace if you wanted to use another matchMedia polyfill for whatever reason.
+
+This is not ready for public release; no unit tests have been run or any in-depth use testing. It works where I need it, though!
+
+## Respond.js 
 ### A fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more)
 
  - Copyright 2011: Scott Jehl, scottjehl.com
@@ -40,7 +46,7 @@ See `cross-domain/example.html` for a demo:
 - Reference the file(s) via `<link />` element(s):
 
 <pre>
-	&lt;!-- Respond.js proxy on external server --&gt;
+    &lt;!-- Respond.js proxy on external server --&gt;
 	&lt;link href=&quot;http://externalcdn.com/respond-proxy.html&quot; id=&quot;respond-proxy&quot; rel=&quot;respond-proxy&quot; /&gt;
 	
 	&lt;!-- Respond.js redirect location on local server --&gt;
